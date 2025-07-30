@@ -26,8 +26,8 @@ const Features: React.FC = () => {
     },
     {
       icon: Bot,
-      title: "AI Trust Score",
-      description: "Get a comprehensive trust score (0-100) with detailed analysis and confidence indicators.",
+      title: "AI Analysis",
+      description: "Get comprehensive AI analysis with detailed pattern recognition and confidence indicators.",
       color: "from-orange-500 to-orange-600",
       glowColor: "group-hover:shadow-orange-500/25"
     }
@@ -62,11 +62,11 @@ const Features: React.FC = () => {
                   {feature.description}
                 </p>
 
-                {/* Trust Score Badge for AI Trust Score */}
-                {feature.title === "AI Trust Score" && (
+                {/* Analysis Badge for AI Analysis */}
+                {feature.title === "AI Analysis" && (
                   <div className="mt-4 flex items-center space-x-2">
                     <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                      92/100
+                      High Confidence
                     </div>
                     <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
                       ⚠️ Medium

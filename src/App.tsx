@@ -18,14 +18,10 @@ import Home from './pages/Home';
 function AppContent() {
   const { currentUser } = useAuth();
 
-  if (!currentUser) {
-    return <Login />;
-  }
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <UserProfile />
+      {currentUser && <UserProfile />}
       <Hero />
       <OurStory />
       <Features />

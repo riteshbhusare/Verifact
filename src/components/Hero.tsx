@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-600 animate-pulse" />
                     <div>
                       <p className="font-semibold text-green-800">VERIFIED</p>
-                      <p className="text-green-700 text-sm">Trust Score: 95/100</p>
+                      <p className="text-green-700 text-sm">Confidence: 95%</p>
                     </div>
                   </div>
                 </div>

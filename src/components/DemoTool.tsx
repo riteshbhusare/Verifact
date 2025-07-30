@@ -7,7 +7,7 @@ const DemoTool: React.FC = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [result, setResult] = useState<{
     status: string;
-    trustScore: number;
+    confidence: number;
     source: string;
     details: string;
   } | null>(null);
@@ -30,19 +30,19 @@ const DemoTool: React.FC = () => {
       const mockResults = {
         news: {
           status: 'verified',
-          trustScore: 92,
+          confidence: 92,
           source: 'Reuters Official',
           details: 'Cross-referenced with 5 reliable sources'
         },
         certificate: {
           status: 'warning',
-          trustScore: 67,
+          confidence: 67,
           source: 'QR Code Mismatch',
           details: 'Document QR code does not match issuing authority database'
         },
         other: {
           status: 'invalid',
-          trustScore: 23,
+          confidence: 23,
           source: 'AI Watermark Detected',
           details: 'Content appears to be AI-generated with manipulation signatures'
         }
@@ -192,16 +192,16 @@ const DemoTool: React.FC = () => {
                   
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Trust Score:</span>
+                      <span className="font-medium">Confidence Level:</span>
                       <div className="flex items-center space-x-2">
-                        <span className="font-bold text-lg">{result.trustScore}/100</span>
+                        <span className="font-bold text-lg">{result.confidence}/100</span>
                         <div className="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">
                           <div 
                             className={`h-full rounded-full ${
-                              result.trustScore >= 80 ? 'bg-green-500' :
-                              result.trustScore >= 50 ? 'bg-yellow-500' : 'bg-red-500'
+                              result.confidence >= 80 ? 'bg-green-500' :
+                              result.confidence >= 50 ? 'bg-yellow-500' : 'bg-red-500'
                             }`}
-                            style={{ width: `${result.trustScore}%` }}
+                            style={{ width: `${result.confidence}%` }}
                           ></div>
                         </div>
                       </div>

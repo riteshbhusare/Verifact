@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -12,6 +13,7 @@ import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import Login from './components/Login';
 import UserProfile from './components/UserProfile';
+import Home from './pages/Home';
 
 function AppContent() {
   const { currentUser } = useAuth();
@@ -40,7 +42,12 @@ function AppContent() {
 function App() {
   return (
     <AuthProvider>
-      <AppContent />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/app" element={<AppContent />} />
+        </Routes>
+      </Router>
     </AuthProvider>
   );
 }

@@ -24,8 +24,8 @@ const Login: React.FC = () => {
       } else {
         await login(email, password);
       }
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error: unknown) {
+      setError((error as Error).message);
     } finally {
       setLoading(false);
     }
@@ -36,8 +36,8 @@ const Login: React.FC = () => {
       setError('');
       setLoading(true);
       await signInWithGoogle();
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error: unknown) {
+      setError((error as Error).message);
     } finally {
       setLoading(false);
     }

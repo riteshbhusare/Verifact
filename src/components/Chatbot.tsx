@@ -83,7 +83,7 @@ const Chatbot: React.FC = () => {
       };
 
       setMessages(prev => [...prev, botMessage]);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error generating response:', error);
       
       // Use mock response when API fails

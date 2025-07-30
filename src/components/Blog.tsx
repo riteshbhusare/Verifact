@@ -10,7 +10,8 @@ const Blog: React.FC = () => {
       readTime: "5 min read",
       views: "2.1k",
       category: "AI Security",
-      image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400",
+      url: "https://www.boomlive.in/fact-check/fake-video-deepfake-pm-modi-rahul-gandhi-kejriwal-viral-on-social-media-24894"
     },
     {
       title: "📜 Forged Certificates in India",
@@ -19,7 +20,8 @@ const Blog: React.FC = () => {
       readTime: "8 min read",
       views: "1.8k",
       category: "Document Security",
-      image: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=400",
+      url: "https://factly.in/fake-degree-certificates-are-being-sold-online-in-the-name-of-ugc-approved-universities/"
     },
     {
       title: "🤖 How AI Detects Misinformation",
@@ -28,7 +30,8 @@ const Blog: React.FC = () => {
       readTime: "6 min read",
       views: "3.2k",
       category: "Technology",
-      image: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=400",
+      url: "https://www.altnews.in/hindi/fake-news-ai-tools-verification-detection/"
     }
   ];
 
@@ -83,19 +86,29 @@ const Blog: React.FC = () => {
                   <span className="font-medium">{post.readTime}</span>
                 </div>
 
-                <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold group/btn">
+                <a 
+                  href={post.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold group/btn"
+                >
                   <span>Read More</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </button>
+                </a>
               </div>
             </article>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+          <a 
+            href="https://timesofindia.indiatimes.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 inline-block"
+          >
             View All Articles
-          </button>
+          </a>
         </div>
       </div>
     </section>

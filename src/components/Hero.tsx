@@ -10,9 +10,9 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Content */}
-          <div className="space-y-8">
+        <div className="text-center">
+          {/* Content */}
+          <div className="space-y-8 max-w-4xl mx-auto">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                 Truth Shouldn't Be a{' '}
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Floating verification badges */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <div className="flex items-center space-x-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5 text-green-600" />
                 <span className="text-green-700 font-medium">AI Verified</span>
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="group bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2">
                 <Play className="w-5 h-5 group-hover:animate-pulse" />
                 <span>Try Demo</span>
@@ -50,44 +50,6 @@ const Hero: React.FC = () => {
               <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Learn More
               </button>
-            </div>
-          </div>
-
-          {/* Right side - Animated Scanner Visual */}
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto">
-              {/* Document mockup */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Shield className="w-4 h-4 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900">Document Verification</h3>
-                </div>
-                
-                {/* Scanning animation */}
-                <div className="relative bg-gray-50 rounded-lg p-4 border-2 border-dashed border-gray-300">
-                  <div className="h-24 bg-gradient-to-r from-gray-100 to-gray-200 rounded flex items-center justify-center">
-                    <div className="text-gray-500 text-sm">Sample Document</div>
-                  </div>
-                  
-                  {/* Scanner line animation */}
-                  <div className="absolute inset-0 overflow-hidden rounded-lg">
-                    <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent animate-pulse"></div>
-                  </div>
-                </div>
-
-                {/* Verification result */}
-                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-6 h-6 text-green-600 animate-pulse" />
-                    <div>
-                      <p className="font-semibold text-green-800">VERIFIED</p>
-                      <p className="text-green-700 text-sm">Confidence: 95%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

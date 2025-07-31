@@ -12,7 +12,6 @@ import Testimonial from './components/Testimonial';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import Login from './components/Login';
-import UserProfile from './components/UserProfile';
 import Home from './pages/Home';
 
 function AppContent() {
@@ -21,7 +20,6 @@ function AppContent() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      {currentUser && <UserProfile />}
       <Hero />
       <OurStory />
       <Features />
